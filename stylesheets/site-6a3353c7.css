@@ -6202,21 +6202,27 @@ hr.light {
 
 a {
   color: #4a86cf;
-  -webkit-transition: all .35s;
-  -moz-transition: all .35s;
-  transition: all .35s; }
+  -webkit-transition: color .35s;
+  -moz-transition: color .35s;
+  transition: color .35s; }
+  a:active, a:visited {
+    color: #4a86cf; }
+  a:hover, a:focus {
+    color: #5e93d4; }
+  a.search img {
+    display: inline-block;
+    margin-right: 3px;
+    margin-top: -2px; }
+  .header-content a {
+    color: white;
+    font-weight: bold;
+    transition: all 200ms;
+    opacity: 0.8; }
+    .header-content a:hover, .header-content a:active {
+      opacity: 1; }
 
 ul {
   font-size: 12pt; }
-
-a:hover,
-a:focus {
-  color: #5e93d4; }
-
-a.search img {
-  display: inline-block;
-  margin-right: 3px;
-  margin-top: -2px; }
 
 h1,
 h2,
@@ -6349,15 +6355,11 @@ aside {
   .navbar-default .nav > li > a:focus:hover {
     color: white; }
 
-  .navbar-default.affix {
+  .navbar-default.affix, .navbar-default.affix-top {
     background-color: #4a86cf; }
 
   .navbar-default.affix .navbar-header .navbar-brand {
     /* font-size: 70%; */ }
-
-  .navbar-default.affix .nav > li > a,
-  .navbar-default.affix .nav > li > a:focus {
-    color: white; }
 
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
@@ -6619,6 +6621,70 @@ table {
       background-color: #4a86cf;
       color: #fff; }
 
+.appslist {
+  padding: 12px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-times: stretch;
+  justify-content: flex-start;
+  min-height: 200px; }
+
+.apptile {
+  position: relative;
+  flex: 1;
+  margin: 6px;
+  padding: 12px;
+  border: 1px solid #b3b3b3;
+  border-radius: 4px;
+  min-height: 180px;
+  min-width: 200px;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  overflow: hidden;
+  flex-grow: 0; }
+  .apptile:hover, .apptile:active {
+    border-width: 2px;
+    padding: 11px;
+    text-decoration: none;
+    color: black; }
+    .apptile:hover img.icon, .apptile:active img.icon {
+      width: 200px;
+      height: 200px;
+      margin: -100px 0 0 -100px;
+      opacity: 1; }
+    .apptile:hover div, .apptile:active div {
+      left: -1px;
+      right: -1px; }
+  .apptile img.icon {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    top: 50%;
+    left: 50%;
+    margin: -64px 0px 0px -64px;
+    transition: all 200ms;
+    opacity: .6; }
+  .apptile div {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex: 1;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 12px;
+    border-top: 3px solid white; }
+  .apptile h4 {
+    font-size: 100%;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #808080;
+    margin: 0 0 2px 0; }
+  .apptile p {
+    font-size: 80%; }
+
 #footer {
   font-size: 90%; }
   #footer a {
@@ -6730,24 +6796,3 @@ table {
 
   .sidebar-offcanvas {
     margin-bottom: 3em; } }
-.apptile {
-  display: flex;
-  flex-direction: row;
-  align-items: center; }
-  .apptile img.icon {
-    margin-right: 15px; }
-  .apptile div {
-    flex: 1;
-    flex-direction: row; }
-  .apptile h4 {
-    font-size: 120%;
-    font-weight: 300;
-    color: #000;
-    margin: 0; }
-  .apptile p {
-    font-size: 90%; }
-  .apptile .btn {
-    width: 32px;
-    height: 32px;
-    overflow: hidden;
-    background: url("../img/download-5ed2548a.svg") no-repeat center; }
