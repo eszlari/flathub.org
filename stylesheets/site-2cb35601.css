@@ -6334,7 +6334,8 @@ aside {
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.8); }
+  color: white;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5); }
 
 .navbar-default .nav > li.active > a:hover,
 .navbar-default .nav > li.active > a:focus:hover {
