@@ -6317,7 +6317,7 @@ aside {
   font-size: 70%;
   display: block;
   padding-left: 42px;
-  background: url("../img/logo-afab9d06.svg") no-repeat 6px center;
+  background: url("../img/logo.svg") no-repeat 6px center;
   margin: 0 12px; }
 
 .navbar-default .nav > li > a,
@@ -6377,7 +6377,7 @@ header {
     position: relative;
     width: 100%;
     padding: 200px 15px;
-    background: #4a86cf url("../img/tiles-2876e9ee.svg") no-repeat top left;
+    background: #4a86cf url("../img/tiles.svg") no-repeat top left;
     color: white; }
     header .header-content h1 {
       margin-top: 0;
