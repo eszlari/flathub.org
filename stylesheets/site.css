@@ -6628,17 +6628,19 @@ table {
   flex-wrap: wrap;
   align-times: stretch;
   justify-content: flex-start;
-  min-height: 200px; }
+  min-height: 200px;
+  box-sizing: content-box; }
 
 .apptile {
+  box-sizing: content-box;
   position: relative;
   flex: 1;
   margin: 6px;
   padding: 12px;
   border: 1px solid #b3b3b3;
   border-radius: 4px;
-  min-height: 250px;
-  min-width: 200px;
+  min-height: 190px;
+  min-width: 190px;
   align-items: center;
   color: black;
   text-decoration: none;
@@ -6646,27 +6648,26 @@ table {
   flex-grow: 0; }
   .apptile:hover, .apptile:active {
     border-width: 2px;
-    padding: 11px;
+    padding: 12px;
+    margin: 5px;
     text-decoration: none;
     color: black; }
     .apptile:hover img.icon, .apptile:active img.icon {
-      width: 64px;
-      height: 64px;
-      margin: 0 0 0 -32px;
+      width: 74px;
+      height: 74px;
+      margin: -8px -38px;
+      /* fixme */
       top: 8%;
       opacity: 1; }
-    .apptile:hover div, .apptile:active div {
-      left: -1px;
-      right: -1px; }
   .apptile img.icon {
     position: absolute;
-    width: 256px;
-    height: 256px;
+    width: 64px;
+    height: 64px;
+    margin: -90px -32px;
     top: 50%;
     left: 50%;
-    margin: -128px 0px 0px -128px;
     transition: all 200ms;
-    opacity: .6; }
+    opacity: .8; }
   .apptile div {
     position: absolute;
     top: 40%;
@@ -6675,7 +6676,7 @@ table {
     bottom: 0;
     flex: 1;
     flex-direction: row;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(252, 252, 252, 0.99);
     padding: 12px;
     border-top: 3px solid white; }
   .apptile h4 {
